@@ -461,7 +461,7 @@ function NetworkModal({ isOpen, onClose }) {
 
 // ======== Main App Component ========
 
-function Web3WalletApp() {
+function App() {
   const { isConnected } = useAccount();
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
   const [isNetworkModalOpen, setIsNetworkModalOpen] = useState(false);
@@ -564,4 +564,4 @@ function Web3WalletApp() {
   );
 }
 
-export default Web3WalletApp;
+export default App;
