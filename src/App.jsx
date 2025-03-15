@@ -1,14 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {
-  useAccount,
-  useConnect,
-  useDisconnect,
-  useEnsName,
-  useBalance,
-  useChainId,
-  useChains,
-  useSwitchChain,
-} from 'wagmi';
+import { useAccount } from 'wagmi';
 
 import NetworkModal from './components/NetworkModal';
 import Account from './components/Account';
@@ -43,7 +34,7 @@ function App() {
                 <div className='relative p-6 bg-[#0D1526]/90 backdrop-blur-sm rounded-2xl shadow-[inset_1px_1px_0.5px_rgba(255,255,255,0.1)]'>
                   <h1 className='mb-2 text-3xl font-bold text-center'>
                     <span className='text-transparent bg-clip-text bg-gradient-to-r from-[#7E3FF2] via-[#00F0FF] to-[#FF1ACD]'>
-                      Web3 Wallet
+                      Kemsguy Wallet dApp
                     </span>
                   </h1>
                   <p className='mb-8 text-center text-gray-300'>Connect your wallet to continue</p>
