@@ -1,3 +1,6 @@
+import BaseLogo from '../assets/BaseLogo.png';
+import MeterLogo from '../assets/MeterLogo.jpeg';
+
 const chainIconsMap = {
   // Mainnet - Ethereum
   1: {
@@ -6,13 +9,13 @@ const chainIconsMap = {
   },
   // Sepolia
   11155111: {
-    icon: 'https://ethereum.org/static/61f6c9c28e9c0d4f3c8685111bb0b537/3bf79/sepolia.png',
-    name: 'Sepolia',
+    icon: 'https://cryptologos.cc/logos/ethereum-eth-logo.svg',
+    name: 'ETH Sepolia',
   },
   // Lisk
   4202: {
     icon: 'https://cryptologos.cc/logos/lisk-lsk-logo.svg',
-    name: 'Lisk',
+    name: 'Lisk Mainnet',
   },
   // Lisk Sepolia
   4201: {
@@ -21,7 +24,7 @@ const chainIconsMap = {
   },
   // Base
   8453: {
-    icon: 'https://cryptologos.cc/logos/base-logo.svg',
+    icon: BaseLogo,
     name: 'Base',
   },
   // Polygon
@@ -31,14 +34,15 @@ const chainIconsMap = {
   },
   // Meter Testnet
   83: {
-    icon: 'https://www.meter.io/assets/images/meter-logo.svg',
+    icon: MeterLogo,
     name: 'Meter Testnet',
   },
-  // WMC Testnet
-  1402: {
-    icon: 'https://cryptologos.cc/logos/wrapped-bitcoin-wbtc-logo.svg', // Placeholder
-    name: 'WMC Testnet',
-  },
+};
+
+// Error handling wrapper
+const getChainIcon = (chainId) => {
+  const chain = chainIconsMap[chainId];
+  return chain?.icon || 'https://cryptologos.cc/logos/default-logo.svg';
 };
 
 export default chainIconsMap;

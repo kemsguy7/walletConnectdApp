@@ -1,18 +1,9 @@
-import {
-  mainnet,
-  sepolia,
-  lisk,
-  liskSepolia,
-  base,
-  polygon,
-  meterTestnet,
-  wmcTestnet,
-} from 'wagmi/chains';
+import { mainnet, sepolia, lisk, liskSepolia, base, polygon, meterTestnet } from 'wagmi/chains';
 import { http, createConfig } from 'wagmi';
 
 // Create the Wagmi config
 export const config = createConfig({
-  chains: [mainnet, sepolia, lisk, liskSepolia, base, polygon, meterTestnet, wmcTestnet],
+  chains: [mainnet, sepolia, lisk, liskSepolia, base, polygon, meterTestnet],
   connectors: [],
   transports: {
     [mainnet.id]: http(),
@@ -22,6 +13,5 @@ export const config = createConfig({
     [base.id]: http(),
     [polygon.id]: http(),
     [meterTestnet.id]: http(),
-    [wmcTestnet.id]: http(),
   },
 });
